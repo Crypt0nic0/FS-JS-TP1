@@ -5,3 +5,13 @@
 // S'assurer que les liens sont clickables
 
 // Donner un style de transparence aux 2 plus gros ronds (mix-blend-mode)
+
+
+const circle = document.querySelectorAll('.circle');
+
+circle.forEach((c) => {
+    window.addEventListener('mousemove', (e) => {
+        c.style.top = e.pageY + "px";
+        c.style.left = e.pageX + "px";
+    });
+});
